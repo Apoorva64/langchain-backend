@@ -4,11 +4,12 @@ from django.db import models
 # Create your models here.
 
 class NodeType(models.Model):
-    node_type = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    category = models.CharField(max_length=100)
     json_schema = models.JSONField()
 
     def __str__(self):
-        return self.node_type
+        return self.category + ' - ' + self.name
 
 
 class EdgeType(models.Model):
