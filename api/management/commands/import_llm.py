@@ -18,7 +18,7 @@ class Command(BaseCommand):
 
         # TODO: convert class to json schema and import it to django
         ollama_schema = {
-            "title": "Ollama",
+            "title": "ollama",
             "type": "object",
             "properties": {
                 "base_url": {"type": "string", "default": "http://localhost:11434"},
@@ -47,7 +47,7 @@ class Command(BaseCommand):
             "required": ["base_url", "model"],
         }
         NodeType.objects.create(
-            name="Ollama",
+            name="ollama",
             category="LLM",
             json_schema=ollama_schema
         )

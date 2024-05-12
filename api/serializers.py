@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import NodeType, EdgeType, Node, Edge
+from .models import NodeType, EdgeType, Node, Edge, Chain
 
 
 class NodeTypeSerializer(serializers.ModelSerializer):
@@ -26,3 +26,7 @@ class EdgeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class ChainSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Chain
+        fields = '__all__'
